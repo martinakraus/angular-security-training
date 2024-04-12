@@ -1,6 +1,6 @@
 # Cross-Site Request Forgery Protection in Angular
 
-- Checkout Branch `csrf-prevention` (`git checkout csrf-prevention`)
+- Checkout Branch `csrf` (`git checkout csrf-prevention`)
 - We need a backend in order to implement Angular CSRF-protection: `cd src/server && npm i`
 - To start the Server run `npm run start:server` from the root directory
 - In order to get a Token we need to login: username: User1 and password: password1
@@ -20,4 +20,4 @@
 this.http.get<{ views: number }>('http://localhost:3000/view', {withCredentials: true})
 ```
 
-[Solution](https://github.com/martinakraus/angular-security/tree/csrf-prevention-solution)
+[Solution](https://github.com/martinakraus/angular-security/tree/csrf-solution)
