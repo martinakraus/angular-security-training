@@ -1,6 +1,4 @@
-# AngularS ecurity Training
-
-[Agenda]
+# Angular Security Training
 
 ## Slides
 
