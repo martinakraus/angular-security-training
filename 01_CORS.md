@@ -5,6 +5,6 @@ https://miro.com/welcome/ZUQ3UlVFQVR6SlZmVkZzSExhZHFWc1I2UVpKN0NNVUJqZ2JRQzJhNld
 
 2. Open the board `Angular Security Training` and assign one section to yourself
 
-3. Withing your section move to `Task 1: Cross Ressource Origin Sharing` and find the right definitions for the given terms
+3. Withing your section move to `Task 1: Cross Origin Resource Sharing` and find the right definitions for the given terms
 
 
