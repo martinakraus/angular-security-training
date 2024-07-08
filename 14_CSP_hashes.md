@@ -1,7 +1,7 @@
 # Content-Security-Policy 
 
 ### CSP Hashes
-- This is an follow up task for the Branch `csp` (`git checkout csp`) (or you can check out branch `csp-hashes` as a starting point for this task
+- This is an follow up task for the Branch `csp`  (or you can check out branch `csp-hashes` (`git checkout csp-hashes`) as a starting point for this task
 - In index.html, declare an arbitrary inline scripting : `<script>document.write('<h1>Inline scripting is <b>not recommended</b>! But if you have not the choice, <b>secure your app with CSP</b></h1>');</script>`
 - Update the CSP in order to allow this inline scripting securely (consider CSP3 SHA-256 hash syntax)
 
