@@ -18,7 +18,7 @@
 ]
 
 //login.component.ts
-this.http.get<{ views: number }>('http://localhost:3000/view', {withCredentials: true})
+this.http.post<{ views: number }>('http://localhost:3000/view', { views: this.views } ,{withCredentials: true})
 ```
 
 [Solution](https://github.com/martinakraus/angular-security/tree/csrf-solution)
