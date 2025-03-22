@@ -4,11 +4,11 @@
 
 - Checkout Branch `integrate-ip` (`git checkout integrate-ip`)
 - Configure Auth0 with you Angular App:
-- Open `app.config.ts` and insert Domain and ClientID (The provideAuth0 function takes the properties domain and clientId) 
+- Open `app.config.ts` and insert Domain and ClientID (The provideAuth0 function takes the properties domain and clientId)
 
 ```
- domain: 'dev-codekittey.eu.auth0.com',  
- clientId: 'PqrUSlrGpMGqBFK9NbjHWZBej8yV8oNY',
+ domain: 'sts-demo.eu.auth0.com',
+ clientId: 'ENO3SeStaymlPsiNn9ntrF3gMQT3jGbS',
 ```
 
 ### Add Login to Your Application
@@ -31,16 +31,17 @@ Specify the returnTo option when calling logout to tell Auth0 where it should re
 
 // LoginButtonComponent
 import { Component } from '@angular/core';
-
 import { AuthService } from '@auth0/auth0-angular';
 
 @Component({
   selector: 'app-login-button',
-  template: '<button (click)="auth.loginWithRedirect()">Log in</button>',
-  standalone: true
+  template: '<button (click)="loginWithRedirect()">Log in</button>',
 })
 export class LoginButtonComponent {
-  constructor(public auth: AuthService) {}
+    private readonly auth = inject(AuthService);
+  loginWithRedirect() {
+    this.auth.loginWithRedirect();
+  }
 }
 
 ```
@@ -58,5 +59,4 @@ export class LogoutButtonComponent {
 }
 ```
 
-
-[Solution](https://github.com/martinakraus/angular-security/pull/new/integrate-ip-solution)
+[Solution](https://github.com/martinakraus/angular-security-2025/tree/integrate-ip-solution)
