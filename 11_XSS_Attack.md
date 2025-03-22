@@ -1,5 +1,9 @@
-# Perform a DOM XSS attack
+# Execute XSS attack inside an Angular App
 
-- Visit the website `https://juice-shop.herokuapp.com/#/score-board?categories=XSS`
-- Look for a URL parameter where its value appears on the page it is leading to and is set by an user input
-- Try probing for XSS vulnerabilities by submitting malicious JavaScript Code: `<iframe src="javascript:alert('xss')">`.
+- Make sure you followed the steps in `10_Setup.md`
+- Checkout Branch `xss-attack` (`git checkout xss-attack`)
+- Inject following malicious JavaScript inside the `Abstract`-Input field: `<iframe src="javascript:alert('xss')">`
+- Investigate the Angular Code - Do you know how the attack could happen?
+- Fix the Issue
+
+[Solution](https://github.com/martinakraus/angular-security-2025/tree/xss-attack-solution)
