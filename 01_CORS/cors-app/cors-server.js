@@ -5,8 +5,11 @@ const cors = require('cors');
 
 const app = express();
 
-// ToDo: configure CORS policy here
-//  app.use(cors({}));
+app.use(cors({
+  origin: 'http://localhost:3000',
+  methods: ['POST'],
+  allowedHeaders: ['content-type', 'x-custom-header'],
+ }));
 
 const port = 4000;
 
