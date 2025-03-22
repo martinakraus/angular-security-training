@@ -18,3 +18,5 @@ Eine Nachrichten-Website bietet während des Logins eine „Angemeldet bleiben�
 ## Aufgabe 3: Ein Drittanbieter-Analysedienst
 
 Eine Website verwendet einen Drittanbieter-Analysedienst, um das Nutzerverhalten zu Marketingzwecken zu verfolgen. Das Analyse-Skript setzt ein Tracking-Cookie, um Nutzer über Sitzungen hinweg zu identifizieren. Dieses Cookie ist nicht essenziell für die Funktionalität der Website, aber hilfreich zur Analyse des Nutzerverhaltens. Die Website wird ausschließlich über HTTPS betrieben, wobei der Schutz der Privatsphäre der Nutzer eine hohe Priorität hat.
+
+[Solution](hhttps://github.com/martinakraus/angular-security-training/blob/solution/02_Cookies.md)
