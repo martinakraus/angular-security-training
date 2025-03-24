@@ -1,35 +1,27 @@
-# Cookie Attribute
+# Cookie Attributes
+## Task 1: E-commerce Website – User Authentication
+A user logs into an e-commerce website. The session is maintained via a cookie that stores the user's authentication token. The goal is to ensure that this session cookie cannot easily be stolen or compromised by attackers through client-side scripts or insecure connections. The website supports both HTTP and HTTPS, but all sensitive interactions are only provided over HTTPS.
 
-## Aufgabe 1: E-Commerce Webseite: Authentifizierung eines Nutzer
+Possible Attributes:
+- Secure: Ensures that the cookie is only sent over HTTPS to protect it from being intercepted over insecure connections.
+- HttpOnly: Prevents client-side scripts (like JavaScript) from accessing the cookie, reducing the risk of XSS attacks.
+- SameSite: Strict or Lax – helps prevent Cross-Site Request Forgery (CSRF) attacks by restricting when the cookie is sent with cross-site requests.
+- Expires/Max-Age: Optional – typically, a session cookie doesn’t require an expiration time, but one can be set to define the session duration if desired.
 
-E-commerce Website: User Authentication
-Ein Benutzer meldet sich auf einer E-Commerce-Website an. Die Sitzung wird über ein Cookie aufrechterhalten, das den Authentifizierungs-Token des Benutzers speichert. Das Ziel ist sicherzustellen, dass dieses Sitzungs-Cookie nicht einfach von Angreifern durch clientseitige Skripte oder über unsichere Verbindungen gestohlen oder kompromittiert werden kann. Die Website unterstützt sowohl HTTP als auch HTTPS, wobei alle sensiblen Interaktionen ausschließlich über HTTPS bereitgestellt werden.
+## Task 2: "Remember Me" Feature
+A news website offers a “stay logged in” option during login, keeping users logged in even after closing the browser. This function stores a persistent cookie that identifies the user for future sessions. The website is accessible via both HTTP and HTTPS but doesn’t involve particularly sensitive user interactions beyond the login.
 
-### Möglichen Attribute:
+Possible Attributes:
+- Secure: Yes – even if no highly sensitive data is processed, the cookie should only be sent over HTTPS to prevent interception.
+- HttpOnly: Yes – even if the XSS risk is lower, this option should be enabled to prevent unnecessary access to the cookie by client-side scripts.
+- SameSite: Lax – allows the cookie to be sent with top-level navigations while still offering basic CSRF protection.
+- Expires/Max-Age: Yes – since this is a persistent cookie, an expiration time should be defined (e.g., 30 days) to limit its lifetime.
 
-- Secure: Stellt sicher, dass das Cookie nur über HTTPS gesendet wird, um es vor Abfangversuchen bei unsicheren Verbindungen zu schützen.
-- HttpOnly: Verhindert den Zugriff von Client-seitigen Skripten (wie JavaScript) auf das Cookie und reduziert das Risiko von XSS-Angriffen.
-- SameSite: Strict oder Lax – hilft, Cross-Site-Request-Forgery-Angriffe (CSRF) zu verhindern, indem eingeschränkt wird, wann das Cookie mit Anfragen gesendet wird, die von anderen Websites stammen.
-- Expires/Max-Age: Optional – typischerweise benötigt ein Sitzungs-Cookie keine Ablaufzeit, aber diese kann entsprechend der Sitzungsdauer festgelegt werden, falls gewünscht.
+# Task 3: Third-Party Analytics Service
+A website uses a third-party analytics service to track user behavior for marketing purposes. The analytics script sets a tracking cookie to identify users across sessions. This cookie is not essential for the website’s functionality but helps with analyzing user behavior. The website is operated exclusively over HTTPS, and protecting user privacy is a high priority.
 
-## Aufgabe 2: 'Remember me'-Feature
-
-Eine Nachrichten-Website bietet während des Logins eine „Angemeldet bleiben“-Option an, die Nutzer auch nach dem Schließen des Browsers angemeldet hält. Diese Funktion speichert ein persistentes Cookie, das den Nutzer für zukünftige Sitzungen identifiziert. Die Website ist sowohl über HTTP als auch HTTPS zugänglich, enthält jedoch keine besonders sensiblen Nutzerinteraktionen außer dem Login.
-
-### Möglichen Attribute:
-
-- Secure: Ja – auch wenn keine sensiblen Daten verarbeitet werden, sollte das Cookie nur über HTTPS gesendet werden, um Abfangen zu verhindern.
-- HttpOnly: Ja – auch wenn das Risiko von XSS geringer sein könnte, sollte diese Option gesetzt werden, um unnötigen Zugriff auf das Cookie durch Client-seitige Skripte zu verhindern.
-- SameSite: Lax – erlaubt das Senden des Cookies bei Top-Level-Navigationen, bietet aber dennoch einen grundlegenden Schutz gegen CSRF-Angriffe.
-- Expires/Max-Age: Ja – da es sich um ein persistentes Cookie handelt, sollte eine Ablaufzeit definiert sein (z. B. 30 Tage), um die Lebensdauer zu begrenzen.
-
-## Aufgabe 3: Ein Drittanbieter-Analysedienst
-
-Eine Website verwendet einen Drittanbieter-Analysedienst, um das Nutzerverhalten zu Marketingzwecken zu verfolgen. Das Analyse-Skript setzt ein Tracking-Cookie, um Nutzer über Sitzungen hinweg zu identifizieren. Dieses Cookie ist nicht essenziell für die Funktionalität der Website, aber hilfreich zur Analyse des Nutzerverhaltens. Die Website wird ausschließlich über HTTPS betrieben, wobei der Schutz der Privatsphäre der Nutzer eine hohe Priorität hat.
-
-### Möglichen Attribute:
-
-- Secure: Ja – stellt sicher, dass das Cookie nur über HTTPS übertragen wird, um es vor Abfangen im Netzwerk zu schützen.
-- HttpOnly: Nein – Drittanbieter-Analysen benötigen häufig Client-seitigen Zugriff auf das Cookie für Tracking-Zwecke, daher sollte diese Option nicht gesetzt werden.
-- SameSite: None – Drittanbieter-Cookies müssen in der Regel mit Anfragen über verschiedene Websites hinweg gesendet werden, daher ermöglicht diese Einstellung die plattformübergreifende Nutzung.
-- Expires/Max-Age: Ja – da es sich um ein Tracking-Cookie handelt, sollte eine angemessene Ablaufzeit definiert sein, z. B. 1 Jahr, abhängig von den Datenschutzrichtlinien.
+Possible Attributes:
+- Secure: Yes – ensures the cookie is only sent over HTTPS to protect it from being intercepted on the network.
+- HttpOnly: No – third-party analytics often require client-side access to the cookie for tracking purposes, so this option should not be enabled.
+- SameSite: None – third-party cookies typically need to be sent with cross-site requests, so this setting allows cross-site usage.
+- Expires/Max-Age: Yes – since this is a tracking cookie, a suitable expiration time should be defined (e.g., 1 year), depending on the privacy policy.
