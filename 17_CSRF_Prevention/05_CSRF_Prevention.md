@@ -1,6 +1,6 @@
 # Cross-Site Request Forgery Protection in Angular
 
-- Checkout the branch `csrf`
+- Checkout the branch `csrf-prevention`
 - Install the dependencies `npm install`
 - To start the Server run `npm start` from the root directory
 - The application is up and running on `http://localhost:3000` (if you change something in the Angular app you need to stop the running Web Server and start it again with `npm start`)
