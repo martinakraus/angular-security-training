@@ -1,8 +1,5 @@
 # Angular Security Training
 
-## Slides
-
-[Slides](https://docs.google.com/presentation/d/1YxCcxBBXRIOJ8bUi99WxWEQE5jTn7d_E8xnIk8jeMv0/edit?usp=sharing)
 
 ## Projekt für den Workshop
 
