@@ -16,4 +16,4 @@ A news website offers a “Stay logged in” option during login, which keeps us
 A website uses a third-party analytics service to track user behavior for marketing purposes. The analytics script sets a tracking cookie to identify users across sessions. This cookie is not essential for the website’s functionality but is useful for analyzing user behavior. The website is operated exclusively over HTTPS, and user privacy protection is a high priority.
 
 
-[Solution](hhttps://github.com/martinakraus/angular-security-training/blob/solution/02_Cookies.md)
+[Solution](https://github.com/martinakraus/angular-security-training/blob/solution/02_Cookies.md)
